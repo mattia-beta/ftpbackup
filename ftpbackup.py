@@ -74,12 +74,12 @@ except socket.error:
 
 def error(resp):
     if '530' in str(resp):
-        print "Incorret Login."
+        print "Incorrect Login."
     elif '550' in str(resp):
-        print "Directory don't Found!"
+        print "Directory not found!"
     else:
         print resp
-        print "Unknow Error."
+        print "Unknown Error."
     sys.exit(1)
 
 def backup_dir():
@@ -153,7 +153,7 @@ def lista(percorso):
             pass
 
 def recursive():
-    print "Wait...Searching for the files.."
+    print "Wait...Searching for files.."
     for name_dir in dirs:
         lista(name_dir)
 
